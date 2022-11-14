@@ -1,0 +1,27 @@
+@import "../sass/mediaqueries.scss";
+
+$padding-mobile : 2vh 1vw;
+$card-radius:6px;
+$padding-desktop: 2vh 2.5vw;
+
+@mixin mobile_container {
+    padding: 1rem;
+    margin: 1vh 0;
+}
+
+@mixin desktop_container {
+    padding: 20px;
+    margin: 0.5vh 4vw;
+}
+
+@mixin main_text_gradient {
+    --color-one: #FF6343;
+    --color-two: hsl(40 95% 55%);
+    background: linear-gradient(90deg,
+            var(--color-one),
+            var(--color-two),
+            var(--color-one)) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
