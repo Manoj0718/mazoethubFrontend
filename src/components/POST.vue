@@ -2,7 +2,7 @@
     <div class="container">
         <div class="section" id="email_form">
             <!-- Form Field all vee-validate -->
-            <Form class="form" name="post_form" @submit="sentEmail()" @keydown.enter="sentEmail()">
+            <Form class="form" ref="form" name="post_form" @submit="sentEmail()" @keydown.enter="sentEmail()">
                 <div>
                     <Field type="email" name="email_input" placeholder="Jouw Email" v-model="formData.email"
                         class="input-box" :rules="validateEmail" />
@@ -17,6 +17,17 @@
                         <ErrorMessage name="name_input" class="error-msg"></ErrorMessage>
                     </p>
                 </div>
+
+
+                <div class="box">
+                    <Field name="box_input" type="checkbox" value="yes" class="check-box" :rules="isRequired" />I geef
+                    de
+                    toestemming om mij
+                    te
+                    mailen. *
+
+                </div>
+                <ErrorMessage name="box_input" class="error-msg"></ErrorMessage>
                 <button class="btn">Submit</button>
                 <p class="returnMsg">{{ sucessMsg }}</p>
             </Form>
@@ -33,6 +44,7 @@ export default {
         Form,
         Field,
         ErrorMessage,
+        useForm,
     },
     data() {
         return {
@@ -40,6 +52,7 @@ export default {
                 first_name: "",
                 email: "",
             },
+
             sucessMsg: "",
         };
     },
@@ -76,23 +89,22 @@ export default {
                     this.sucessMsg = jsonResponce.message;
                     console.log(jsonResponce);
                     // this.formData.email = this.formData.first_name = '';
-                }
-                else {
+                } else {
                     this.sucessMsg = "This email adress alredy in our suscripe list";
-                    throw new Error(
-                        "This  adress alredy in our suscripe list");
+                    throw new Error("This  adress alredy in our suscripe list");
                 }
             } catch (error) {
                 this.sucessMsg = error;
             }
+            // reset the form
+            this.$refs.form.resetForm();
         },
-
     },
 };
 </script>
 <style lang="scss" scoped>
 @import "../assets/sass/mixin.scss";
-@import '../assets/sass/mediaqueries.scss';
+@import "../assets/sass/mediaqueries.scss";
 
 .container {
     @include mobile_container;
@@ -118,6 +130,11 @@ export default {
                 margin: 0.5em;
                 width: 80%;
                 font-size: 1rem;
+            }
+
+            .box {
+                font-size: 0.8rem;
+                padding: 0.2em;
 
             }
 
@@ -140,8 +157,7 @@ export default {
             }
 
             .returnMsg {
-                background-color: #F46544;
-                color: #1A2136;
+                color: #1a2136;
             }
         }
     }

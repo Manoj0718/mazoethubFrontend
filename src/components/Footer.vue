@@ -2,7 +2,8 @@
     <div style="background-color: #191919; color: #FAFAF9;">
         <div class="footer">
             <div class="logo">
-                <img src="../assets/M-solutions_Bilzen_mazoet_prizen.png" />
+                <a href="https://www.linkedin.com/in/manojfernando-web-developer/" target="_blank">
+                    <img src="../assets/M-solutions_Bilzen_mazoet_prizen.png" /></a>
             </div>
             <div class="logoSection">
                 <div class="one">
