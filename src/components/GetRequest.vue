@@ -33,7 +33,7 @@ export default {
         }
     },
     async mounted() {
-        console.log(import.meta.env.VITE_GET_REQUEST);
+        //console.log(import.meta.env.VITE_GET_REQUEST);
         try {
             const responce = await fetch(import.meta.env.VITE_GET_REQUEST);
             // const responce = await fetch("https://mazoethub.fly.dev/api/");
