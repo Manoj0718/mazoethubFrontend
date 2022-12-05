@@ -87,7 +87,7 @@ export default {
                 if (responce.ok) {
                     const jsonResponce = await responce.json();
                     this.sucessMsg = jsonResponce.message;
-                    console.log(jsonResponce);
+                    // console.log(jsonResponce);
                     // this.formData.email = this.formData.first_name = '';
                 } else {
                     this.sucessMsg = "This email adress alredy in our suscripe list";
