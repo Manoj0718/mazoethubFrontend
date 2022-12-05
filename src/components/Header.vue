@@ -62,8 +62,6 @@ export default {
                 height: 20px;
             }
 
-
-
             @keyframes slide1 {
 
                 0%,
