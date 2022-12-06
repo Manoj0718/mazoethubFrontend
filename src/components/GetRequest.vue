@@ -40,7 +40,7 @@ export default {
             const jsonResponce = await responce.json();
             this.prices = jsonResponce.price;
             this.dataReady = true;
-            // console.log(this.prices);
+            console.log(this.prices);
 
         } catch (error) {
             console.log(error);
