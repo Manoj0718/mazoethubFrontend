@@ -8,7 +8,7 @@
             <h3>2000 L - {{ prices.price2000 }}<span>+vat</span></h3>
         </div>
         <div v-else class="loading">
-            <p>try refresh again</p>
+            <p>Waiting</p>
             <span></span>
             <span></span>
             <span></span>
@@ -36,12 +36,9 @@ export default {
         //console.log(import.meta.env.VITE_GET_REQUEST);
         try {
             const responce = await fetch(import.meta.env.VITE_GET_REQUEST);
-            // const responce = await fetch("https://mazoethub.fly.dev/api/");
             const jsonResponce = await responce.json();
             this.prices = jsonResponce.price;
             this.dataReady = true;
-            // console.log(this.prices);
-
         } catch (error) {
             console.log(error);
             this.dataReady = false;
