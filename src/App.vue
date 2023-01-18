@@ -19,7 +19,6 @@ import Footer from './components/Footer.vue';
 import whySection from './components/whySection.vue';
 import HeroVue from './components/Hero.vue';
 
-
 export default {
 
   components: { GetRequest, Header, PostRequest, WhatSection, Footer, whySection, HeroVue }
