@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="whatSection">
-            <h3 id="h3title">Warrom</h3>
+            <h3 class="h3title">Warrom</h3>
             <p>Herken jij je hierin? Bijna ieder jaar overkomt het ons dat we vergeten om het
                 mazoutpeil in de tank te controleren en merken we pas wanneer de verwarming
                 niet aanslaat of het badwater ijskoud blijft, dat de tank leeg is. Tot voor enkele
@@ -44,12 +44,6 @@
         </div>
     </div>
 </template>
-<script>
-export default {
-
-
-}
-</script>
 
 <style lang="scss" scoped>
 @import '../assets/sass/mixin.scss';
@@ -76,7 +70,7 @@ export default {
         }
     }
 
-    #h3title {
+    .h3title {
         font-size: clamp(1.2rem, -0.875rem + 8.333vw, 1.7rem);
         font-weight: 500px;
         margin: 1vh;
