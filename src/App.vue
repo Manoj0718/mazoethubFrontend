@@ -18,7 +18,7 @@ import WhatSection from './components/WhatSection.vue';
 import Footer from './components/Footer.vue';
 import whySection from './components/whySection.vue';
 import HeroVue from './components/Hero.vue';
-// import GetRequest from './components/GetRequest.vue';
+
 
 export default {
 
