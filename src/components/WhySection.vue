@@ -68,7 +68,6 @@ export default {
     .whatSection {
         border-radius: $card-radius;
         text-align: start;
-        // background-color: #F8F6FF;
         background-color: #EEEEFF;
         padding: $padding-mobile;
 
