@@ -15,8 +15,8 @@ $padding-desktop: 2vh 2.5vw;
 }
 
 @mixin main_text_gradient {
-    --color-one: #FF6343;
-    --color-two: hsl(40 95% 55%);
+    --color-one: #ff4722;
+    --color-two: rgb(249, 245, 31);
     background: linear-gradient(90deg,
             var(--color-one),
             var(--color-two),

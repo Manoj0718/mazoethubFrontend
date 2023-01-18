@@ -1,5 +1,5 @@
 <template>
-    <div style="background-color: #191919; color: #FAFAF9;">
+    <div style="background-color: #14143C; color: #FFFFF;">
         <div class="footer">
             <div class="logo">
                 <a href="https://www.linkedin.com/in/manojfernando-web-developer/" target="_blank">
@@ -8,7 +8,7 @@
             <div class="logoSection">
                 <div class="one">
                     <a href="https://www.linkedin.com/in/manojfernando-web-developer/" target="_blank">
-                        <h3>Linkedin</h3>
+                        <h3 style="font-weight:400">Linkedin</h3>
                     </a>
                 </div>
                 <div class="one">
@@ -43,13 +43,13 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: #FAFAF9;
+    color: #FFFF;
 
     .logo {
         padding: 0 1vh;
 
         img {
-            border: 1px solid white;
+            // border: 1px solid white;
             width: 60%;
             margin: auto;
             // height: 80%;
@@ -106,6 +106,7 @@ export default {
 
     p {
         text-align: center;
+        color: #FAFAF9;
     }
 }
 </style>

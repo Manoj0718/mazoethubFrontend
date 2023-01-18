@@ -33,7 +33,6 @@ export default {
         }
     },
     async mounted() {
-        //console.log(import.meta.env.VITE_GET_REQUEST);
         try {
             const responce = await fetch(import.meta.env.VITE_GET_REQUEST);
             const jsonResponce = await responce.json();
@@ -74,13 +73,14 @@ export default {
         border-radius: $card-radius;
         text-align: center;
         padding: $padding-mobile;
-        background-color: #F8F6FF;
+        background-color: #14143C;
 
         .main-text {
             // font-size: clamp(1rem, 2.7vw + 1.3rem, 3rem);
-            --bg-size: 400%;
+            --bg-size: 500%;
             // font-size: clamp(3rem, 25vmin, 12rem);
-            font-size: clamp(2rem, 2.7vw + 1.3rem, 8rem);
+            font-size: clamp(3rem, 2.7vw + 1.3rem, 8rem);
+            font-weight: 700px;
             @include main_text_gradient;
         }
 
@@ -96,16 +96,24 @@ export default {
             }
         }
 
-        span {
-            margin: 0 5px;
-            font-size: clamp(.7rem, 2.7vw - 0.7rem, 1rem);
+        h3,
+        h2 {
+            color: #ffff;
+            font-weight: 400;
+
+            span {
+                margin: 0 5px;
+                font-size: clamp(.7rem, 2.7vw - 0.7rem, 1rem);
+            }
+
         }
+
     }
 
     .loading {
         text-align: center;
-        background-color: #F8F6FF;
-        background-color: #F8F6FF;
+        // background-color: #F8F6FF;
+        background-color: #EEEEFF;
     }
 
     .loading span {

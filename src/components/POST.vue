@@ -11,7 +11,7 @@
                     </p>
                 </div>
                 <div>
-                    <Field type="text" class="input-box" name="name_input" placeholder="Jouw VoorNaam"
+                    <Field type="text" class="input-box" name="name_input" placeholder="Jouw Voornaam"
                         v-model="formData.first_name" :rules="isRequired" />
                     <p>
                         <ErrorMessage name="name_input" class="error-msg"></ErrorMessage>
@@ -20,7 +20,8 @@
 
 
                 <div class="box">
-                    <Field name="box_input" type="checkbox" value="yes" class="check-box" :rules="isRequired" />I geef
+                    <Field name="box_input" type="checkbox" value="yes" class="check-box" :rules="isRequired"
+                        style="margin-right:0.5vh" />I geef
                     de
                     toestemming om mij
                     te
@@ -123,6 +124,7 @@ export default {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
 
             .input-box {
                 text-align: center;
@@ -134,7 +136,7 @@ export default {
 
             .box {
                 font-size: 0.8rem;
-                padding: 0.2em;
+                padding: 0.5em;
 
             }
 
@@ -150,14 +152,16 @@ export default {
                 cursor: pointer;
 
                 &:hover {
-                    box-shadow: inset 0 -3.25em 0 0 #7e994d;
+                    box-shadow: inset 0 -3.25em 0 0 #14143C;
                     border-color: #7e994d;
                     color: #fff;
                 }
             }
 
-            .returnMsg {
+            .error-msg {
                 color: #1a2136;
+                font-size: 0.8rem;
+                text-align: center;
             }
         }
     }
