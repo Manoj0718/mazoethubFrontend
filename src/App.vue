@@ -5,7 +5,7 @@
     <WhatSection></WhatSection>
     <GetRequest></GetRequest>
     <PostRequest></PostRequest>
-    <WhySection></WhySection>
+    <Why></Why>
     <Footer></Footer>
   </div>
 </template>
@@ -16,12 +16,11 @@ import Header from './components/Header.vue';
 import PostRequest from './components/POST.vue';
 import WhatSection from './components/WhatSection.vue';
 import Footer from './components/Footer.vue';
-import WhySection from './components/whySection.vue';
+import Why from './components/Why.vue';
 import HeroVue from './components/Hero.vue';
 
 export default {
-
-  components: { Header, HeroVue, WhatSection, GetRequest, PostRequest, WhySection, Footer }
+  components: { Header, HeroVue, WhatSection, GetRequest, PostRequest, Why, Footer }
 }
 </script>
 
