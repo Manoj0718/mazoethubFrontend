@@ -21,7 +21,7 @@ import HeroVue from './components/Hero.vue';
 
 export default {
 
-  components: { GetRequest, Header, PostRequest, WhatSection, Footer, whySection, HeroVue }
+  components: { GetRequest, Header, PostRequest, WhatSection, Footer, HeroVue }
 }
 </script>
 
