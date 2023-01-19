@@ -45,6 +45,12 @@
     </div>
 </template>
 
+<script>
+export default {
+
+}
+</script>
+
 <style lang="scss" scoped>
 @import '../assets/sass/mixin.scss';
 @import '../assets/sass/mediaqueries.scss';
