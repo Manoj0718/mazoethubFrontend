@@ -14,6 +14,13 @@ $padding-desktop: 2vh 2.5vw;
     margin: 0.5vh 4vw;
 }
 
+@mixin button_basic {
+    border: 2px solid #252422;
+    line-height: 1;
+    padding: 1em 2em;
+    font-size: 1rem;
+}
+
 @mixin main_text_gradient {
     --color-one: #ff4722;
     --color-two: rgb(249, 245, 31);

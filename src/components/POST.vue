@@ -4,7 +4,7 @@
             <!-- Form Field all vee-validate -->
             <Form class="form" ref="form" name="post_form" @submit="sentEmail()" @keydown.enter="sentEmail()">
                 <div>
-                    <Field type="email" name="email_input" placeholder="Jouw Email" v-model="formData.email"
+                    <Field type="email" name="email_input" placeholder="jouw e-mail" v-model="formData.email"
                         class="input-box" :rules="validateEmail" />
                     <p>
                         <ErrorMessage name="email_input" class="error-msg"></ErrorMessage>
@@ -18,19 +18,13 @@
                     </p>
                 </div>
 
-
                 <div class="box">
                     <Field name="box_input" type="checkbox" value="yes" class="check-box" :rules="isRequired"
-                        style="margin-right:0.5vh" />I geef
-                    de
-                    toestemming om mij
-                    te
-                    mailen. *
-
+                        style="margin-right: 0.5vh" />Ik geef toestemming dat je me mailt. *
                 </div>
                 <ErrorMessage name="box_input" class="error-msg"></ErrorMessage>
-                <button class="btn">Submit</button>
-                <p class="returnMsg">{{ sucessMsg }}</p>
+                <button class="btn">Verzenden</button>
+                <p class="returnMsg" style="background-color: #00ff3c;">{{ sucessMsg }}</p>
             </Form>
         </div>
     </div>
@@ -62,23 +56,24 @@ export default {
             if (value && value.trim()) {
                 return true;
             }
-            return "This is required";
+            return "Dit is nodig";
         },
 
         validateEmail(value) {
             // if the field is empty
             if (!value) {
-                return "This field is required";
+                return "Dit is nodig";
             }
             // if the field is not a valid email
             const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
             if (!regex.test(value)) {
-                return "This field must be a valid email";
+                return "is dit een geldige e-mail?";
             }
             // All is good
             return true;
         },
         async sentEmail() {
+            console.log(import.meta.env.VITE_POST_REQUEST);
             try {
                 const responce = await fetch(import.meta.env.VITE_POST_REQUEST, {
                     method: "POST",
@@ -88,11 +83,13 @@ export default {
                 if (responce.ok) {
                     const jsonResponce = await responce.json();
                     this.sucessMsg = jsonResponce.message;
-                    // console.log(jsonResponce);
+                    console.log(jsonResponce);
                     // this.formData.email = this.formData.first_name = '';
                 } else {
-                    this.sucessMsg = "This email adress alredy in our suscripe list";
-                    throw new Error("This  adress alredy in our suscripe list");
+                    console.log(responce);
+                    document.querySelector(".returnMsg").classList.add("error");
+                    this.sucessMsg = responce;
+                    throw new Error("Dit adres staat al in onze suscripe-lijst");
                 }
             } catch (error) {
                 this.sucessMsg = error;
@@ -137,31 +134,35 @@ export default {
             .box {
                 font-size: 0.8rem;
                 padding: 0.5em;
-
             }
 
             .btn {
-                background-color: #ff6343;
-                border: 2px solid #252422;
-                line-height: 1;
-                margin: 1em;
-                padding: 1em 2em;
-                color: #fafaf9;
+                @include button_basic;
                 transition: 0.5s;
-                font-size: 1rem;
                 cursor: pointer;
+                background-color: #ff6343;
+                color: #fafaf9;
+                margin: 1em;
 
                 &:hover {
-                    box-shadow: inset 0 -3.25em 0 0 #14143C;
+                    box-shadow: inset 0 -3.25em 0 0 #14143c;
                     border-color: #7e994d;
                     color: #fff;
                 }
             }
 
             .error-msg {
-                color: #1a2136;
+                color: #ffffff;
                 font-size: 0.8rem;
                 text-align: center;
+                background-color: #ff0000;
+                padding: .25rem;
+            }
+
+            .returnMsg.error {
+                color: #296397;
+                background-color: #00ff3c;
+                padding: .25rem;
             }
         }
     }

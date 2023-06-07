@@ -41,7 +41,7 @@ export default {
         } catch (error) {
             console.log(error);
             this.dataReady = false;
-            this.errorMessage = 'try later'
+            this.errorMessage = 'probeer het later nog eens'
             // "We can not connect to the server right now";
         }
 

@@ -2,8 +2,18 @@
     <div style="background-color: #14143C; color: #FFFFF;">
         <div class="footer">
             <div class="logo">
-                <a href="https://www.linkedin.com/in/manojfernando-web-developer/" target="_blank">
-                    <img src="../assets/M-solutions_Bilzen_mazoet_prizen.png" /></a>
+                <router-link to="/">
+                    <img src="../assets/M-solutions_Bilzen_mazoet_prizen.png" />
+                </router-link>
+
+            </div>
+            <div class="router">
+                <router-link to="/unscribe">
+                    <p class="text">Uitschrijven</p>
+                </router-link>
+                <router-link to="/">
+                    <p class="text">Home</p>
+                </router-link>
             </div>
             <div class="logoSection">
                 <div class="one">
@@ -26,7 +36,6 @@
             <p>© 2022 M-Solutions. All rights reserved</p>
         </div>
     </div>
-
 </template>
 
 <script>
@@ -56,50 +65,76 @@ export default {
         }
     }
 
-    .logoSection {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
+    .router {
+        text-align: center;
+
+        @media screen and (min-width:map-get($breakpoints, desktop)) {
+            text-align: center;
+        }
+
+
+        .text {
+            text-decoration: none;
+            color: #65ec65;
+            margin: 0.5rem;
+
+            &:hover {
+                color: #f8f6ff;
+                ;
+            }
+        }
+
+    }
+
+}
+
+
+
+.logoSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1vh;
+
+    .one {
+        padding: 0 2px;
         align-items: center;
-        padding: 1vh;
+        color: white;
 
-        .one {
-            padding: 0 2px;
-            align-items: center;
+        a {
+            text-decoration: none;
+            color: #FAFAF9;
 
-            a {
-                text-decoration: none;
-                color: #FAFAF9;
+            h3 {
+                font-size: clamp(1rem, 0vw + 1rem, 1rem);
+            }
+        }
 
-                h3 {
-                    font-size: clamp(1rem, 0vw + 1rem, 1rem);
-                }
+        svg {
+            animation: slide1 2s ease-in-out infinite;
+            //* svg use fill to change color //
+            fill: #FAFAF9;
+            width: 20px;
+            height: 20px;
+        }
+
+
+
+        @keyframes slide1 {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
             }
 
-            svg {
-                animation: slide1 2s ease-in-out infinite;
-                //* svg use fill to change color //
-                fill: #FAFAF9;
-                width: 20px;
-                height: 20px;
-            }
-
-
-
-            @keyframes slide1 {
-
-                0%,
-                100% {
-                    transform: translate(0, 0);
-                }
-
-                50% {
-                    transform: translate(0, 5px);
-                }
+            50% {
+                transform: translate(0, 5px);
             }
         }
     }
 }
+
 
 .rights_column {
     padding: 2vh;
