@@ -73,7 +73,6 @@ export default {
             return true;
         },
         async sentEmail() {
-            console.log(import.meta.env.VITE_POST_REQUEST);
             try {
                 const responce = await fetch(import.meta.env.VITE_POST_REQUEST, {
                     method: "POST",
@@ -83,10 +82,10 @@ export default {
                 if (responce.ok) {
                     const jsonResponce = await responce.json();
                     this.sucessMsg = jsonResponce.message;
-                    console.log(jsonResponce);
+                    // console.log(jsonResponce);
                     // this.formData.email = this.formData.first_name = '';
                 } else {
-                    console.log(responce);
+                    // console.log(responce);
                     document.querySelector(".returnMsg").classList.add("error");
                     this.sucessMsg = responce;
                     throw new Error("Dit adres staat al in onze suscripe-lijst");

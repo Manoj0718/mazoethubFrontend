@@ -63,15 +63,14 @@ export default {
         async sentEmail() {
 
             try {
-                console.log(this.formData);
-                const responce = await fetch('http://localhost:4000/api/userdelete', {
+                const responce = await fetch(import.meta.env.VITE_UNSUBSCRIBE_REQUEST, {
                     method: 'DELETE',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(this.formData),
                 });
                 if (responce.ok) {
                     const jsonResponce = await responce.json();
-                    console.log('line 74', jsonResponce);
+                    // console.log('line 74', jsonResponce);
                     this.sucessMsg = jsonResponce.message;
                 } else {
                     const errorMsg = await responce.json();
@@ -81,7 +80,8 @@ export default {
                 }
 
             } catch (error) {
-                console.log(error);
+                // console.log(error);
+                throw new Error(error);
             }
             //* reset the form
             this.$refs.form.resetForm();
