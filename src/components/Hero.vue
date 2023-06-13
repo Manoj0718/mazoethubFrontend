@@ -38,8 +38,6 @@ export default {
 @import "../assets/sass/mixin.scss";
 
 .fullwidthconatiner {
-
-    border: 1px solid red;
     margin: 0;
     padding: 0;
     background-image: url('../assets/Bilzen_mazoet_prijzen_vandag.jpg');
