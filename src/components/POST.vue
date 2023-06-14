@@ -36,9 +36,11 @@ import { Form, Field, ErrorMessage, useForm } from "vee-validate";
 
 export default {
     components: {
+        // eslint-disable-next-line vue/no-reserved-component-names
         Form,
         Field,
         ErrorMessage,
+        // eslint-disable-next-line vue/no-unused-components
         useForm,
     },
     data() {
