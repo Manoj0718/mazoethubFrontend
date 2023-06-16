@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build—target=es2020",
     "preview": "vite preview"
   },
   "dependencies": {

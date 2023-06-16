@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <div style="background-color: #14143C; color: #FFFFF;">
         <div class="footer">
