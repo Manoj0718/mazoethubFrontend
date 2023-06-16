@@ -6,7 +6,7 @@
             <p>Wanneer jij je uitschrijft ontvang jij geen info meer over mazoutprijzen in Bilzen.</p>
         </div>
         <div class="imageSide">
-            <img src="../assets/mazoet prizen ,Bilzen.webp" class="img-fluid" alt="">
+            <img src="../assets/mazoet_bilzen_price.webp" class="img-fluid" alt="">
         </div>
 
         <div class="section" id="email_form">
@@ -23,9 +23,9 @@
                 <button class="unsubscribe-button">Uitschrijven</button>
             </Form>
         </div>
-        <router-link to="/">
+    <!-- <router-link to="/">
             <button class="cancel-button">Teruggaan</button>
-        </router-link>
+                                                    </router-link> -->
     </div>
 </template>
 
@@ -198,4 +198,4 @@ export default {
 }
 </style>
 
-//* https://codepen.io/manoj0718/pen/dygBLaE
+<!-- //* https://codepen.io/manoj0718/pen/dygBLaE -->
