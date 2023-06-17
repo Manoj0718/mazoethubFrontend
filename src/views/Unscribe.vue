@@ -25,7 +25,7 @@
         </div>
     <!-- <router-link to="/">
             <button class="cancel-button">Teruggaan</button>
-                                                    </router-link> -->
+                                                                </router-link> -->
     </div>
 </template>
 
@@ -64,7 +64,7 @@ export default {
         },
 
         async sentEmail() {
-
+            console.log(import.meta.env.VITE_UNSUBSCRIBE_REQUEST);
             try {
                 const responce = await fetch(import.meta.env.VITE_UNSUBSCRIBE_REQUEST, {
                     method: 'DELETE',

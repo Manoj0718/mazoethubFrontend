@@ -3,10 +3,10 @@
 <template>
     <div class="container">
         <div class="whatSection">
-            <h3 class="h3title">Warrom</h3>
+            <h3 class="h3title">Waarom</h3>
             <p>Herken jij je hierin? Bijna ieder jaar overkomt het ons dat we vergeten om het
-                mazoutpeil in de tank te controleren en merken we pas wanneer de verwarming
-                niet aanslaat of het badwater ijskoud blijft, dat de tank leeg is. Tot voor enkele
+                mazoutpeil in de tank te controleren. We merken pas dat de tank leeg is, wanneer de verwarming
+                niet aanslaat of het badwater ijskoud blijft. Tot voor enkele
                 jaren geleden was dat niet zo een probleem. We telefoneerde naar de leverancier
                 en diezelfde dag werd er mazout geleverd. De prijzen schommelden wel wat maar
                 niet in die mate dan wat we nu kennen. Dit is verleden tijd. Of Putin, de oorlog of
@@ -19,16 +19,14 @@
                 Hiervoor moet je gaan googelen naar de <span style="font-weight: 900;">mazoutprijs in Bilzen</span>.
                 <br> Maar we zijn
                 allemaal mensen die met zoveel dingen bezig zijn en dagelijks de mazoutprijs
-                nagaan is er teveel aan. Ook bij ons staat dit niet op de prioriteitenlijst en er
-                zijn leukere dingen om te doen.
+                nagaan is er teveel aan. Ook bij ons staat dit niet op de prioriteitenlijst.
                 Maar doordat we vergeten waren om het mazoutpeil na te kijken moesten
                 we tanken toen de mazoutprijs op zijn hoogste punt stond.
-                Dus dacht ik …. Deze fout wil ik niet meer maken en begon ik naar
-                oplossingen te zoeken zodat ik geen opportuniteiten meer mis en niet meer
+                Dus dacht ik …. Deze fout wil ik niet meer maken. Ik begon naar
+                oplossingen te zoeken zodat ik niet meer
                 moet tanken aan deze monsterprijzen. <br>
                 Als programmeur los je dingen op en maak je het leven makkelijker door te
-                automatiseren. Als oplossing voor dit probleem van gemiste kansen en
-                daardoor veel geld te veel te betalen heb ik voor mijzelf een automatisatie
+                automatiseren. Als oplossing voor dit probleem heb ik voor mijzelf een automatisatie
                 ontwikkeld die mij op de hoogte houdt van de huidige mazoutprijs. Nu krijg ik
                 iedere dag een email die mij laat weten wat de mazoutprijs is. Aan de hand
                 van deze informatie kan ik beslissen of ik mijn tank ga bijvullen of niet.

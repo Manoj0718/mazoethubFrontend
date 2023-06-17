@@ -4,7 +4,7 @@
             <!-- Form Field all vee-validate -->
             <Form class="form" ref="form" name="post_form" @submit="sentEmail()" @keydown.enter="sentEmail()">
                 <div>
-                    <Field type="email" name="email_input" placeholder="jouw e-mail" v-model="formData.email"
+                    <Field type="email" name="email_input" placeholder="Jouw e-mail" v-model="formData.email"
                         class="input-box" :rules="validateEmail" />
                     <p>
                         <ErrorMessage name="email_input" class="error-msg"></ErrorMessage>
@@ -20,7 +20,7 @@
 
                 <div class="box">
                     <Field name="box_input" type="checkbox" value="yes" class="check-box" :rules="isRequired"
-                        style="margin-right: 0.5vh" />Ik geef toestemming dat je me mailt. *
+                        style="margin-right: 0.5vh" /> Ik geef toestemming dat je me e-mailt. *
                 </div>
                 <ErrorMessage name="box_input" class="error-msg"></ErrorMessage>
                 <button class="btn">Verzenden</button>

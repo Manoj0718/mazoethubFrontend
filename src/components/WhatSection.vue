@@ -4,9 +4,9 @@
             <h3 style="font-weight:900">Wat</h3>
             <p style="text-align:center">Indien jij een bewoner van Bilzen of een deelgemeente hiervan bent en jij
                 mazout als brandstof gebruikt dan is deze gratis service zeker voor jou. <br>
-                Deze app controleert voor jou iedere dag de mazoutprijs die geldt voor Bilzen. <br>
-                Iedere dag, van maandag tot zaterdag, om 10.00u krijg jij deze informatie als jij dat
-                wil doorgestuurd naar jouw emailadres.</p>
+                Deze app controleert iedere dag voor jou de mazoutprijs die geldt voor Bilzen. <br>
+                Als jij wil krijg jij iedere dag, van maandag tot zaterdag, om 10.00u deze informatie
+                doorgestuurd naar jouw emailadres.</p>
         </div>
     </div>
 </template>
