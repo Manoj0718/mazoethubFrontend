@@ -23,9 +23,9 @@
                 <button class="unsubscribe-button">Uitschrijven</button>
             </Form>
         </div>
-    <!-- <router-link to="/">
+        <router-link to="/">
             <button class="cancel-button">Teruggaan</button>
-                                                                </router-link> -->
+        </router-link>
     </div>
 </template>
 
