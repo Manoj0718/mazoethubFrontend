@@ -10,8 +10,27 @@
 
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
+import { computed, reactive } from 'vue'
+import { useHead } from '@vueuse/head'
 
 export default {
+  setup() {
+    const siteData = reactive({
+      title: `Mazoutprijzen in Bilzen, België |Informatie over Mazout in Bilzen`,
+      description: ` Ontvang dagelijks bijgewerkte mazoutprijzen in Bilzen. Vind de beste prijzen voor mazout vandaag. Blijf op de hoogte van de actuele mazoutprijzen en profiteer van onze voordelige tarieven. Bespaar op uw energiekosten met onze betrouwbare mazoutlevering.`,
+    })
+    useHead({
+      // Can be static or computed
+      title: computed(() => siteData.title),
+      meta: [
+        {
+          name: `description`,
+          content: computed(() => siteData.description),
+        },
+      ],
+
+    })
+  },
   // eslint-disable-next-line vue/no-reserved-component-names
   components: { Footer, Header },
 
