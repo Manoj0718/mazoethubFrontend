@@ -14,6 +14,8 @@ import { computed, reactive } from 'vue'
 import { useHead } from '@vueuse/head'
 
 export default {
+  // eslint-disable-next-line vue/no-reserved-component-names
+  components: { Footer, Header },
   setup() {
     const siteData = reactive({
       title: `Mazoutprijzen in Bilzen, België |Informatie over Mazout in Bilzen`,
@@ -31,8 +33,6 @@ export default {
 
     })
   },
-  // eslint-disable-next-line vue/no-reserved-component-names
-  components: { Footer, Header },
 
 }
 </script>

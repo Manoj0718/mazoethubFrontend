@@ -23,7 +23,7 @@
                     </a>
                 </div>
                 <div class="one">
-                    <a href="https://www.linkedin.com/in/manojfernando-web-developer/" target="_blank">
+                    <a href="https://webdeveloper-ten.vercel.app/" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                             <path

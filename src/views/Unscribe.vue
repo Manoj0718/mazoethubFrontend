@@ -32,6 +32,8 @@
 <script>
 
 import { Form, Field, ErrorMessage, useForm } from 'vee-validate';
+import { computed, reactive } from 'vue';
+import { useHead } from '@vueuse/head';
 export default {
     components: {
         // eslint-disable-next-line vue/no-reserved-component-names
@@ -40,6 +42,19 @@ export default {
         ErrorMessage,
         // eslint-disable-next-line vue/no-unused-components
         useForm,
+    },
+    setup() {
+        const siteData = reactive({
+            title: `Dagelijkse Mazoetprijzen in Bilzen, België`,
+            description: ` Blijf op de hoogte van de dagelijkse mazoetprijzen in Bilzen. Ontdek de beste prijzen voor mazoet en bespaar op uw verwarmingskosten. Dagelijks bijgewerkte mazoetprijzen specifiek voor inwoners van Bilzen, België.`
+        })
+        useHead({
+            title: computed(() => siteData.title),
+            meta: [{
+                name: `description`,
+                content: computed(() => siteData.description),
+            }]
+        })
     },
     data() {
         return {
