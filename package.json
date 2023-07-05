@@ -17,7 +17,7 @@
     "dayjs": "^1.11.6",
     "dotenv": "^16.0.3",
     "dotenv-webpack": "^8.0.1",
-    "sass": "^1.55.0",
+    "sass": "^1.63.4",
     "vee-validate": "^4.9.4",
     "vue": "^3.2.37",
     "vue-router": "^4.1.6",
