@@ -75,7 +75,7 @@ export default {
             return true;
         },
         async sentEmail() {
-
+            console.log('click');
             try {
                 const responce = await fetch(import.meta.env.VITE_POST_REQUEST, {
                     method: "POST",
@@ -85,7 +85,6 @@ export default {
                 if (responce.ok) {
                     const jsonResponce = await responce.json();
                     this.sucessMsg = jsonResponce.message;
-                    // console.log(jsonResponce);
                     // this.formData.email = this.formData.first_name = '';
                 } else {
                     // console.log(responce);
