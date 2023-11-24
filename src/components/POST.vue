@@ -75,7 +75,7 @@ export default {
             return true;
         },
         async sentEmail() {
-            console.log('click');
+
             try {
                 const responce = await fetch(import.meta.env.VITE_POST_REQUEST, {
                     method: "POST",
